@@ -5,6 +5,8 @@
 var express = require('express');
 var app = express();
 
+app.use(express.static('public'));
+
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
@@ -14,7 +16,7 @@ app.post('/seal', function(req, res){
         "text": "Seal of approval",
         "attachments": [
             {
-                "thumb_url":"https://cdn.shopify.com/s/files/1/0860/3518/products/sealofapproval_comp.jpg?v=1432862016"
+                "img_url":"https://sealofapproval.herokuapp.com/seal.jpg"
             }
         ]
     };
