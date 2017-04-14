@@ -21,7 +21,7 @@ app.post('/seal', function(req, res){
         "response_type": "in_channel",
         "attachments": [
             {
-                "img_url":"https://sealofapproval.herokuapp.com/seal.jpg"
+                "img_url":"http://media.treehugger.com/assets/images/2013/10/seal-of-approval-meme.jpg"
             }
         ]
     };
