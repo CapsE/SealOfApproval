@@ -3,17 +3,22 @@
  */
 
 var express = require('express');
+var bodyParser = require('body-parser')
+
 var app = express();
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
 app.post('/seal', function(req, res){
+    console.log(req.body);
     var data = {
         "text": "Seal of approval",
+        "response_type": "in_channel",
         "attachments": [
             {
                 "img_url":"https://sealofapproval.herokuapp.com/seal.jpg"
