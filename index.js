@@ -21,6 +21,7 @@ app.post('/seal', function(req, res){
         "response_type": "in_channel",
         "attachments": [
             {
+                "text":"Du hast gerade das \"Seal of Approval\" bekommen. Gute Arbeit!",
                 "thumb_url":"https://sealofapproval.herokuapp.com/seal.jpg"
             }
         ]
